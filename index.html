@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geografia - Copa do Mundo 2026</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #050505;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+
+        .slide-transition {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Estilização para simular tela de slide widescreen */
+        .slide-container {
+            aspect-ratio: 16 / 9;
+            max-height: 85vh;
+        }
+
+        @media (max-width: 1024px) {
+            .slide-container {
+                aspect-ratio: auto;
+                max-height: none;
+            }
+        }
+
+        .neon-glow-morocco {
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+        }
+        .neon-glow-haiti {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+        }
+        .neon-glow-scotland {
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen justify-between p-4 md:p-8">
+
+    <!-- Top Header / Navigation Bar -->
+    <header class="w-full max-w-7xl mx-auto flex flex-wrap justify-between items-center mb-4 gap-4">
+        <div class="flex items-center gap-3">
+            <div class="bg-gradient-to-tr from-yellow-500 to-green-500 p-2 rounded-xl">
+                <i data-lucide="globe-2" class="w-6 h-6 text-black animate-spin-slow"></i>
+            </div>
+            <div>
+                <span class="text-xs text-gray-500 font-bold uppercase tracking-widest">Atividade de Geografia</span>
+                <h1 class="text-lg font-bold bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">COPA DO MUNDO 2026</h1>
+            </div>
+        </div>
+        
+        <!-- Slide Indicators -->
+        <nav class="flex items-center gap-2 bg-neutral-900/80 p-1.5 rounded-full border border-neutral-800">
+            <button onclick="goToSlide(0)" class="nav-dot w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all bg-white text-black">1</button>
+            <button onclick="goToSlide(1)" class="nav-dot w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all text-gray-400 hover:text-white">2</button>
+            <button onclick="goToSlide(2)" class="nav-dot w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all text-gray-400 hover:text-white">3</button>
+            <button onclick="goToSlide(3)" class="nav-dot w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all text-gray-400 hover:text-white">4</button>
+            <button onclick="goToSlide(4)" class="nav-dot w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all text-gray-400 hover:text-white">5</button>
+        </nav>
+    </header>
+
+    <!-- Main Presentation Area -->
+    <main class="w-full max-w-7xl mx-auto flex-grow flex items-center justify-center my-2">
+        <div class="w-full slide-container bg-neutral-950 rounded-3xl border border-neutral-900 relative overflow-hidden flex flex-col justify-between p-6 md:p-12 shadow-2xl">
+            
+            <!-- BG Decorative Elements -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- SLIDE 1: COVER -->
+            <div id="slide-0" class="slide slide-transition opacity-100 flex flex-col justify-between h-full">
+                <div class="flex justify-between items-start">
+                    <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 rounded-full text-xs text-emerald-400 font-mono">SLIDE 01 // CAPA</span>
+                    <i data-lucide="trophy" class="w-8 h-8 text-yellow-500"></i>
+                </div>
+                
+                <div class="my-auto text-center space-y-4">
+                    <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 px-4 py-1.5 rounded-full text-xs text-emerald-400 font-semibold uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Geografia & Cultura Esportiva
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tight leading-tight uppercase">
+                        Países da Copa <br>
+                        <span class="bg-gradient-to-r from-green-400 via-yellow-400 to-blue-500 bg-clip-text text-transparent">Mundial 2026</span>
+                    </h2>
+                    <p class="text-neutral-500 max-w-lg mx-auto text-xs md:text-sm">
+                        Análise de dados espaciais, indicadores sociais e econômicos de Marrocos, Haiti e Escócia.
+                    </p>
+                </div>
+
+                <div class="flex justify-between items-center text-xs text-neutral-500 border-t border-neutral-900 pt-4">
+                    <div>MODALIDADE: <strong class="text-neutral-300">INDIVIDUAL</strong></div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-neutral-700"></span>
+                        <span>Use as setas do teclado ou clique para navegar</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 2: MARROCOS -->
+            <div id="slide-1" class="slide slide-transition opacity-0 hidden flex flex-col justify-between h-full">
+                <div class="flex justify-between items-center border-b border-neutral-900 pb-3">
+                    <div class="flex items-center gap-3">
+                        <span class="px-3 py-1 bg-red-950/40 border border-red-900/50 rounded-full text-xs text-red-400 font-mono">02</span>
+                        <h3 class="text-2xl font-black tracking-wider uppercase text-white">MARROCOS</h3>
+                    </div>
+                    <!-- SVG Flag Morocco -->
+                    <div class="w-14 h-9 rounded-md overflow-hidden shadow-lg border border-neutral-800">
+                        <svg viewBox="0 0 900 600" class="w-full h-full">
+                            <rect width="900" height="600" fill="#c1272d"/>
+                            <polygon points="450,136 482,236 573,170 517,250 599,292 501,292 533,392 450,326 367,392 399,292 301,292 383,250 327,170 418,236" fill="none" stroke="#006233" stroke-width="18"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Visual Content Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-auto">
+                    <!-- Col 1: Geo & Capital -->
+                    <div class="bg-neutral-900/40 border border-neutral-800/80 p-4 rounded-2xl flex flex-col justify-between space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2 bg-emerald-500/10 rounded-xl text-emerald-400"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <div class="text-[10px] text-neutral-500 font-bold uppercase">Continente / Capital</div>
+                                <div class="text-sm font-bold text-neutral-200">África / Rabat</div>
+                            </div>
+                        </div>
+                        <!-- Mini Styled Map Placeholder Vector -->
+                        <div class="h-28 bg-neutral-950 rounded-xl border border-neutral-800 relative flex items-center justify-center overflow-hidden">
+                            <!-- Simple outline of Africa & Morocco highlight -->
+                            <svg viewBox="0 0 200 120" class="w-full h-full opacity-60">
+                                <path d="M 40,20 Q 50,10 70,12 T 90,30 T 110,60 T 120,90 T 80,110 T 60,90 T 35,60 Z" fill="#262626" />
+                                <circle cx="50" cy="22" r="6" fill="#10b981" class="animate-ping" />
+                                <circle cx="50" cy="22" r="4" fill="#10b981" />
+                            </svg>
+                            <span class="absolute bottom-2 right-2 text-[9px] text-emerald-400 font-mono tracking-widest uppercase">Norte da África</span>
+                        </div>
+                    </div>
+
+                    <!-- Col 2: Economia e IDH (Sem parágrafos de texto) -->
+                    <div class="bg-neutral-900/40 border border-neutral-800/80 p-4 rounded-2xl flex flex-col justify-between space-y-3">
+                        <div class="flex justify-between items-center border-b border-neutral-800 pb-2">
+                            <span class="text-[10px] text-neutral-500 font-bold uppercase">PIB (Nominal)</span>
+                            <span class="text-sm font-black text-emerald-400">$140.2 Bilhões</span>
+                        </div>
+                        <!-- Progress bar representation -->
+                        <div class="w-full bg-neutral-950 rounded-full h-1.5">
+                            <div class="bg-emerald-500 h-1.5 rounded-full" style="width: 45%"></div>
+                        </div>
+
+                        <div class="flex justify-between items-center border-b border-neutral-800 pt-2 pb-2">
+                            <span class="text-[10px] text-neutral-500 font-bold uppercase">IDH (Médio)</span>
+                            <span class="text-sm font-black text-emerald-400">0.698</span>
+                        </div>
+                        <!-- Gauge simulation -->
+                        <div class="flex items-center gap-2">
+                            <div class="w-full bg-neutral-950 rounded-full h-2 overflow-hidden">
+                                <div class="bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 h-full" style="width: 69.8%"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center border-b border-neutral-800 pt-2 pb-1">
+                            <span class="text-[10px] text-neutral-500 font-bold uppercase">Moeda Oficial</span>
+                            <span class="text-xs font-bold text-neutral-200">Dirham Marroquino (MAD)</span>
+                        </div>
+                    </div>
+
+                    <!-- Col 3: Uniforme / Jogador de Destaque -->
+                    <div class="bg-neutral-900/40 border border-neutral-800/80 p-4 rounded-2xl flex flex-col justify-between items-center relative overflow-hidden">
+                        <div class="absolute top-2 left-2 text-[9px] text-neutral-500 font-bold uppercase">Uniforme Oficial</div>
+                        <!-- SVG Jersey Marrocos -->
+                        <svg viewBox="0 0 100 100" class="w-24 h-24 my-1 filter drop-shadow-[0_8px_16px_rgba(16,185,129,0.3)]">
+                            <!-- Jersey template -->
+                            <path d="M 30,20 L 40,12 L 60,12 L 70,20 L 80,35 L 70,40 L 65,30 L 65,85 L 35,85 L 35,30 L 30,40 L 20,35 Z" fill="#c1272d"/>
+                            <!-- Collar & Trim -->
+                            <path d="M 40,12 Q 50,22 60,12" fill="none" stroke="#006233" stroke-width="3"/>
+                            <!-- Sleeve accents -->
+                            <path d="M 20,35 L 30,40" stroke="#006233" stroke-width="4"/>
+                            <path d="M 80,35 L 70,40" stroke="#006233" stroke-width="4"/>
+                            <!-- Star detail (Morocco) -->
+                            <polygon points="50,38 52,44 58,44 53,48 55,54 50,50 45,54 47,48 42,44 48,44" fill="#006233"/>
+                            <!-- Number -->
+                            <text x="50" y="70" font-family="'Montserrat'" font-weight="bold" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
+                        </svg>
+                        <div class="text-center mt-2">
+                            <div class="text-[11px] font-black text-emerald-400 uppercase tracking-widest">Achraf Hakimi</div>
+                            <div class="text-[9px] text-neutral-500">Destaque Mundial // Lateral</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center text-[10px] text-neutral-500 border-t border-neutral-900 pt-3">
+                    <span>SELEÇÃO NACIONAL: MARROCOS (CAF)</span>
+                    <span class="text-emerald-400 font-bold">EMERGENTE GLOBAL</span>
+                </div>
+            </div>
+
+            <!-- SLIDE 3: HAITI -->
+            <div id="slide-2" class="slide slide-transition opacity-0 hidden flex flex-col justify-between h-full">
+                <div class="flex justify-between items-center border-b border-neutral-900 pb-3">
+                    <div class="flex items-center gap-3">
+                        <span class="px-3 py-1 bg-blue-950/40 border border-blue-900/50 rounded-full text-xs text-blue-400 font-mono">03</span>
+                        <h3 class="text-2xl font-black tracking-wider uppercase text-white">HAITI</h3>
+                    </div>
+                    <!-- SVG Flag Haiti -->
+                    <div class="w-14 h-9 rounded-md overflow-hidden shadow-lg border border-neutral-800 relative">
+                        <svg viewBox="0 0 50 30" class="w-full h-full">
+                            <rect width="50" height="15" fill="#00209F"/>
+                            <rect y="15" width="50" height="15" fill="#D21034"/>
+                            <!-- Coat of arms central white square -->
+                            <rect x="21" y="11" width="8" height="8" fill="#FFFFFF"/>
+                            <!-- Simple stylized palm representation -->
+                            <line x1="25" y1="12" x2="25" y2="18" stroke="#007A33" stroke-width="0.8"/>
+                            <circle cx="25" cy="13" r="1.5" fill="#EAAA00"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Visual Content Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-auto">
+                    <!-- Col 1: Geo & Capital -->
+                    <div class="bg-neutral-900/40 border border-neutral-800/80 p-4 rounded-2xl flex flex-col justify-between space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2 bg-blue-500/10 rounded-xl text-blue-400"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <div class="text-[10px] text-neutral-500 font-bold uppercase">Continente / Capital</div>
+                                <div class="text-sm font-bold text-neutral-200">América Central / Porto Príncipe</div>
+                            </div>
+                        </div>
+                        <!-- Mini Styled Map Placeholder Vector -->
+                        <div class="h-28 bg-neutral-950 rounded-xl border border-neutral-800 relative flex items-center justify-center overflow-hidden">
+                            <!-- Simple outline of Caribbean islands & Haiti highlight -->
+                            <svg viewBox="0 0 200 120" class="w-full h-full opacity-60">
+                                <path d="M 20,40 Q 50,30 90,42 T 130,50 T 170,45" fill="none" stroke="#262626" stroke-width="8" stroke-linecap="round"/>
+                                <circle cx="85" cy="42" r="6" fill="#3b82f6" class="animate-ping" />
+                                <circle cx="85" cy="42" r="4" fill="#3b82f6" />
+                            </svg>
+                            <span class="absolute bottom-2 right-2 text-[9px] text-blue-400 font-mono tracking-widest uppercase">Caribe</span>
+                        </div>
+                    </div>
+
+                    <!-- Col 2: Economia e IDH -->
+                    <div class="bg-neutral-900/40 border border-neutral-800/80 p-4 rounded-2xl flex flex-col justify-between space-y-3">
+                        <div class="flex justify-between items-center border-b border-neutral-800 pb-2">
+                            <span class="text-[10px] text-neutral-500 font-bold uppercase">PIB (Nominal)</span>
+                            <span class="text-sm font-black text-blue-400">$32.1 Bilhões</span>
+                        </div>
+                        <!-- Progress bar representation -->
+                        <div class="w-full bg-neutral-950 rounded-full h-1.5">
+                            <div class="bg-blue-500 h-1.5 rounded-full" style="width: 15%"></div>
+                        </div>
+
+                        <div class="flex justify-between items-center border-b border-neutral-800 pt-2 pb-2">
+                            <span class="text-[10px] text-neutral-500 font-bold uppercase">IDH (Baixo)</span>
+                            <span class="text-sm font-black text-blue-400">0.552</span>
+                        </div>
+                        <!-- Gauge simulation -->
+                        <div class="flex items-center gap-2">
+                            <div class="w-full bg-neutral-950 rounded-full h-2 overflow-hidden">
+                                <div class="bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 h-full" style="width: 55.2%"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center border-b border-neutral-800 pt-2 pb-1">
+                            <span class="text-[10px] text-neutral-500 font-bold uppercase">Moeda Oficial</span>
+                            <span class="text-xs font-bold text-neutral-200">Gourde Haitiano (HTG)</span>
+                        </div>
+                    </div>
+
+                    <!-- Col 3: Uniforme -->
+                    <div class="bg-neutral-900/40 border border-neutral-800/80 p-4 rounded-2xl flex flex-col justify-between items-center relative overflow-hidden">
+                        <div class="absolute top-2 left-2 text-[9px] text-neutral-500 font-bold uppercase">Uniforme Oficial</div>
+                        <!-- SVG Jersey Haiti -->
+                        <svg viewBox="0 0 100 100" class="w-24 h-24 my-1 filter drop-shadow-[0_8px_16px_rgba(59,130,246,0.3)]">
+                            <!-- Jersey template -->
+                            <path d="M 30,20 L 40,12 L 60,12 L 70,20 L 80,35 L 70,40 L 65,30 L 65,85 L 35,85 L 35,30 L 30,40 L 20,35 Z" fill="#00209F"/>
+                            <!-- Collar & Trim -->
+                            <path d="M 40,12 Q 50,22 60,12" fill="none" stroke="#D21034" stroke-width="3"/>
+                            <!-- Sleeve accents -->
+                            <path d="M 20,35 L 30,40" stroke="#D21034" stroke-width="4"/>
+                            <path d="M 80,35 L 70,40" stroke="#D21034" stroke-width="4"/>
+                            <!-- White stripes detailing -->
+                            <line x1="50" y1="25" x2="50" y2="85" stroke="#ffffff" stroke-width="2" stroke-dasharray="3,3"/>
+                            <!-- Number -->
+                            <text x="50" y="70" font-family="'Montserrat'" font-weight="bold" font-size="14" fill="#ffffff" text-anchor="middle">9</text>
+                        </svg>
+                        <div class="text-center mt-2">
+                            <div class="text-[11px] font-black text-blue-400 uppercase tracking-widest">Frantzdy Pierrot</div>
+                            <div class="text-[9px] text-neutral-500">Destaque Mundial // Atacante</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center text-[10px] text-neutral-500 border-t border-neutral-900 pt-3">
+                    <span>SELEÇÃO NACIONAL: HAITI (CONCACAF)</span>
+                    <span class="text-blue-400 font-bold">DESAFIO E SUPERAÇÃO</span>
+                </div>
+            </div>
+
+            <!-- SLIDE 4: ESCÓCIA -->
+            <div id="slide-3" class="slide slide-transition opacity-0 hidden flex flex-col justify-between h-full">
+                <div class="flex justify-between items-center border-b border-neutral-900 pb-3">
+                    <div class="flex items-center gap-3">
+                        <span class="px-3 py-1 bg-indigo-950/40 border border-indigo-900/50 rounded-full text-xs text-indigo-400 font-mono">04</span>
+                        <h3 class="text-2xl font-black tracking-wider uppercase text-white">ESCÓCIA</h3>
+                    </div>
+                    <!-- SVG Flag Scotland -->
+                    <div class="w-14 h-9 rounded-md overflow-hidden shadow-lg border border-neutral-800">
+                        <svg viewBox="0 0 5 3" class="w-full h-full">
+                            <rect width="5" height="3" fill="#0065BF"/>
+                            <polygon points="0,0 5,3 5,0 0,3" fill="none" stroke="#ffffff" stroke-width="0.6"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Visual Content Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-auto">
+                    <!-- Col 1: Geo & Capital -->
+                    <div class="bg-neutral-900/40 border border-neutral-800/80 p-4 rounded-2xl flex flex-col justify-between space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2 bg-indigo-500/10 rounded-xl text-indigo-400"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <div class="text-[10px] text-neutral-500 font-bold uppercase">Continente / Capital</div>
+                                <div class="text-sm font-bold text-neutral-200">Europa / Edimburgo</div>
+                            </div>
+                        </div>
+                        <!-- Mini Styled Map Placeholder Vector -->
+                        <div class="h-28 bg-neutral-950 rounded-xl border border-neutral-800 relative flex items-center justify-center overflow-hidden">
+                            <!-- Simple outline of Europe/UK & Scotland highlight -->
+                            <svg viewBox="0 0 200 120" class="w-full h-full opacity-60">
+                                <path d="M 60,90 Q 50,70 65,50 T 70,25 T 90,20 T 100,50 Z" fill="#262626"/>
+                                <circle cx="75" cy="30" r="6" fill="#6366f1" class="animate-ping" />
+                                <circle cx="75" cy="30" r="4" fill="#6366f1" />
+                            </svg>
+                            <span class="absolute bottom-2 right-2 text-[9px] text-indigo-400 font-mono tracking-widest uppercase">Norte da Europa</span>
+                        </div>
+                    </div>
+
+                    <!-- Col 2: Economia e IDH -->
+                    <div class="bg-neutral-900/40 border border-neutral-800/80 p-4 rounded-2xl flex flex-col justify-between space-y-3">
+                        <div class="flex justify-between items-center border-b border-neutral-800 pb-2">
+                            <span class="text-[10px] text-neutral-500 font-bold uppercase">PIB (Fração UK)</span>
+                            <span class="text-sm font-black text-indigo-400">$220 Bilhões</span>
+                        </div>
+                        <!-- Progress bar representation -->
+                        <div class="w-full bg-neutral-950 rounded-full h-1.5">
+                            <div class="bg-indigo-500 h-1.5 rounded-full" style="width: 78%"></div>
+                        </div>
+
+                        <div class="flex justify-between items-center border-b border-neutral-800 pt-2 pb-2">
+                            <span class="text-[10px] text-neutral-500 font-bold uppercase">IDH (Muito Alto)</span>
+                            <span class="text-sm font-black text-indigo-400">0.901</span>
+                        </div>
+                        <!-- Gauge simulation -->
+                        <div class="flex items-center gap-2">
+                            <div class="w-full bg-neutral-950 rounded-full h-2 overflow-hidden">
+                                <div class="bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 h-full" style="width: 90.1%"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center border-b border-neutral-800 pt-2 pb-1">
+                            <span class="text-[10px] text-neutral-500 font-bold uppercase">Moeda Oficial</span>
+                            <span class="text-xs font-bold text-neutral-200">Libra Esterlina (GBP)</span>
+                        </div>
+                    </div>
+
+                    <!-- Col 3: Uniforme -->
+                    <div class="bg-neutral-900/40 border border-neutral-800/80 p-4 rounded-2xl flex flex-col justify-between items-center relative overflow-hidden">
+                        <div class="absolute top-2 left-2 text-[9px] text-neutral-500 font-bold uppercase">Uniforme Oficial</div>
+                        <!-- SVG Jersey Escócia -->
+                        <svg viewBox="0 0 100 100" class="w-24 h-24 my-1 filter drop-shadow-[0_8px_16px_rgba(99,102,241,0.3)]">
+                            <!-- Jersey template -->
+                            <path d="M 30,20 L 40,12 L 60,12 L 70,20 L 80,35 L 70,40 L 65,30 L 65,85 L 35,85 L 35,30 L 30,40 L 20,35 Z" fill="#002D62"/>
+                            <!-- Collar & Trim -->
+                            <path d="M 40,12 Q 50,22 60,12" fill="none" stroke="#ffffff" stroke-width="3"/>
+                            <!-- Sleeve accents -->
+                            <path d="M 20,35 L 30,40" stroke="#ffffff" stroke-width="3"/>
+                            <path d="M 80,35 L 70,40" stroke="#ffffff" stroke-width="3"/>
+                            <!-- Subtle Tartan Pattern Simulation (Yellow Lines) -->
+                            <line x1="38" y1="25" x2="38" y2="85" stroke="#EAAA00" stroke-width="1" opacity="0.4"/>
+                            <line x1="62" y1="25" x2="62" y2="85" stroke="#EAAA00" stroke-width="1" opacity="0.4"/>
+                            <!-- Number -->
+                            <text x="50" y="70" font-family="'Montserrat'" font-weight="bold" font-size="14" fill="#ffffff" text-anchor="middle">3</text>
+                        </svg>
+                        <div class="text-center mt-2">
+                            <div class="text-[11px] font-black text-indigo-400 uppercase tracking-widest">Andy Robertson</div>
+                            <div class="text-[9px] text-neutral-500">Destaque Mundial // Lateral-Esquerdo</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center text-[10px] text-neutral-500 border-t border-neutral-900 pt-3">
+                    <span>SELEÇÃO NACIONAL: ESCÓCIA (UEFA)</span>
+                    <span class="text-indigo-400 font-bold">ALTA PERFORMANCE</span>
+                </div>
+            </div>
+
+            <!-- SLIDE 5: DESAFIO DE PALPITES -->
+            <div id="slide-4" class="slide slide-transition opacity-0 hidden flex flex-col justify-between h-full">
+                <div class="flex justify-between items-center border-b border-neutral-900 pb-3">
+                    <div class="flex items-center gap-3">
+                        <span class="px-3 py-1 bg-yellow-950/40 border border-yellow-900/50 rounded-full text-xs text-yellow-500 font-mono">05</span>
+                        <h3 class="text-2xl font-black tracking-wider uppercase text-white">DESAFIO DE PALPITES</h3>
+                    </div>
+                    <span class="text-xs bg-yellow-500/10 border border-yellow-500/20 px-3 py-1 rounded-full text-yellow-500 font-bold uppercase">Copa do Mundo 2026</span>
+                </div>
+
+                <!-- Match Score Visual Arena -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-auto">
+                    
+                    <!-- Match 1: Brasil x Haiti -->
+                    <div class="bg-neutral-900/60 border border-neutral-800 p-5 rounded-2xl flex flex-col justify-between space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] text-neutral-500 font-bold tracking-widest">REALIZADO: 19/06/2026</span>
+                            <span class="text-[9px] bg-green-500/10 text-green-400 px-2 py-0.5 rounded-full font-bold">GRUPO</span>
+                        </div>
+                        
+                        <!-- Core Scoreboard -->
+                        <div class="flex justify-around items-center py-2">
+                            <!-- Brasil -->
+                            <div class="text-center">
+                                <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-yellow-400 mx-auto flex items-center justify-center">
+                                    <svg viewBox="0 0 100 70" class="w-full h-full scale-125">
+                                        <rect width="100" height="70" fill="#009c3b"/>
+                                        <polygon points="50,8 92,35 50,62 8,35" fill="#fdec00"/>
+                                        <circle cx="50" cy="35" r="16" fill="#002776"/>
+                                    </svg>
+                                </div>
+                                <span class="text-xs font-black block mt-2 text-yellow-400">BRA</span>
+                            </div>
+
+                            <!-- Interactive Score -->
+                            <div class="flex items-center gap-3 bg-neutral-950 px-4 py-2 rounded-2xl border border-neutral-800">
+                                <span class="text-3xl font-black text-white" id="score-bra-1">4</span>
+                                <span class="text-neutral-600 font-bold">X</span>
+                                <span class="text-3xl font-black text-white" id="score-hai">1</span>
+                            </div>
+
+                            <!-- Haiti -->
+                            <div class="text-center">
+                                <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-blue-500 mx-auto flex items-center justify-center">
+                                    <svg viewBox="0 0 50 30" class="w-full h-full scale-125">
+                                        <rect width="50" height="15" fill="#00209F"/>
+                                        <rect y="15" width="50" height="15" fill="#D21034"/>
+                                    </svg>
+                                </div>
+                                <span class="text-xs font-black block mt-2 text-blue-400">HAI</span>
+                            </div>
+                        </div>
+
+                        <!-- Mini Analysis tags (No long texts) -->
+                        <div class="grid grid-cols-3 gap-2 pt-2 border-t border-neutral-950">
+                            <div class="bg-neutral-950 p-2 rounded-xl text-center">
+                                <div class="text-[8px] text-neutral-500 font-bold uppercase">Posse</div>
+                                <div class="text-xs font-bold text-neutral-300">68% / 32%</div>
+                            </div>
+                            <div class="bg-neutral-950 p-2 rounded-xl text-center">
+                                <div class="text-[8px] text-neutral-500 font-bold uppercase">Chutes</div>
+                                <div class="text-xs font-bold text-neutral-300">18 / 4</div>
+                            </div>
+                            <div class="bg-neutral-950 p-2 rounded-xl text-center">
+                                <div class="text-[8px] text-neutral-500 font-bold uppercase">Clima</div>
+                                <div class="text-xs font-bold text-neutral-300">22°C // Sol</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Match 2: Brasil x Escócia -->
+                    <div class="bg-neutral-900/60 border border-neutral-800 p-5 rounded-2xl flex flex-col justify-between space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] text-neutral-500 font-bold tracking-widest">DATA: 24/06/2026</span>
+                            <span class="text-[9px] bg-red-500/10 text-red-400 px-2 py-0.5 rounded-full font-bold">RODADA 3</span>
+                        </div>
+                        
+                        <!-- Core Scoreboard -->
+                        <div class="flex justify-around items-center py-2">
+                            <!-- Brasil -->
+                            <div class="text-center">
+                                <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-yellow-400 mx-auto flex items-center justify-center">
+                                    <svg viewBox="0 0 100 70" class="w-full h-full scale-125">
+                                        <rect width="100" height="70" fill="#009c3b"/>
+                                        <polygon points="50,8 92,35 50,62 8,35" fill="#fdec00"/>
+                                        <circle cx="50" cy="35" r="16" fill="#002776"/>
+                                    </svg>
+                                </div>
+                                <span class="text-xs font-black block mt-2 text-yellow-400">BRA</span>
+                            </div>
+
+                            <!-- Interactive Score -->
+                            <div class="flex items-center gap-3 bg-neutral-950 px-4 py-2 rounded-2xl border border-neutral-800">
+                                <span class="text-3xl font-black text-white" id="score-bra-2">2</span>
+                                <span class="text-neutral-600 font-bold">X</span>
+                                <span class="text-3xl font-black text-white" id="score-sco">0</span>
+                            </div>
+
+                            <!-- Escócia -->
+                            <div class="text-center">
+                                <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-indigo-400 mx-auto flex items-center justify-center">
+                                    <svg viewBox="0 0 5 3" class="w-full h-full scale-125">
+                                        <rect width="5" height="3" fill="#0065BF"/>
+                                        <polygon points="0,0 5,3 5,0 0,3" fill="none" stroke="#ffffff" stroke-width="0.6"/>
+                                    </svg>
+                                </div>
+                                <span class="text-xs font-black block mt-2 text-indigo-400">SCO</span>
+                            </div>
+                        </div>
+
+                        <!-- Mini Analysis tags (No long texts) -->
+                        <div class="grid grid-cols-3 gap-2 pt-2 border-t border-neutral-950">
+                            <div class="bg-neutral-950 p-2 rounded-xl text-center">
+                                <div class="text-[8px] text-neutral-500 font-bold uppercase">Posse</div>
+                                <div class="text-xs font-bold text-neutral-300">55% / 45%</div>
+                            </div>
+                            <div class="bg-neutral-950 p-2 rounded-xl text-center">
+                                <div class="text-[8px] text-neutral-500 font-bold uppercase">Histórico</div>
+                                <div class="text-xs font-bold text-neutral-300">Favorito</div>
+                            </div>
+                            <div class="bg-neutral-950 p-2 rounded-xl text-center">
+                                <div class="text-[8px] text-neutral-500 font-bold uppercase">Chances</div>
+                                <div class="text-xs font-bold text-neutral-300">Muito Altas</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex justify-between items-center text-[10px] text-neutral-500 border-t border-neutral-900 pt-3">
+                    <span>PALPITE BASEADO EM GEOGRAFIA DOS ESPORTES & DESEMPENHO</span>
+                    <span class="text-yellow-500 font-bold">DESAFIO COMPLETO</span>
+                </div>
+            </div>
+
+            <!-- Footer / Slide Controls -->
+            <div class="flex justify-between items-center border-t border-neutral-900 pt-4 mt-4">
+                <button onclick="prevSlide()" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-neutral-900 hover:bg-neutral-800 transition-colors border border-neutral-800 text-xs text-neutral-300">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    <span>Anterior</span>
+                </button>
+                
+                <span class="text-[10px] text-neutral-600 font-mono tracking-widest uppercase">
+                    Pressione <kbd class="px-1.5 py-0.5 bg-neutral-900 rounded border border-neutral-800 text-neutral-400">Setas</kbd> para navegar
+                </span>
+
+                <button onclick="nextSlide()" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-neutral-900 hover:bg-neutral-800 transition-colors border border-neutral-800 text-xs text-neutral-300">
+                    <span>Próximo</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Page Footer & Meta Info -->
+    <footer class="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center mt-4 pt-4 border-t border-neutral-900 text-[10px] text-neutral-600 gap-4">
+        <div>COPA DO MUNDO DE 2026 — MARROCOS, HAITI & ESCÓCIA</div>
+        <div class="flex items-center gap-4">
+            <span>MODO APRESENTAÇÃO ATIVO (16:9 HD)</span>
+            <span class="text-green-500 font-bold flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-ping"></span>
+                PREVIEW PRONTO
+            </span>
+        </div>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        let currentSlide = 0;
+        const totalSlides = 5;
+
+        function updateSlideUI() {
+            // Hide all slides
+            for (let i = 0; i < totalSlides; i++) {
+                const s = document.getElementById(`slide-${i}`);
+                if (s) {
+                    s.classList.add('opacity-0', 'hidden');
+                    s.classList.remove('opacity-100');
+                }
+            }
+
+            // Show current
+            const activeSlide = document.getElementById(`slide-${currentSlide}`);
+            if (activeSlide) {
+                activeSlide.classList.remove('hidden');
+                setTimeout(() => {
+                    activeSlide.classList.add('opacity-100');
+                    activeSlide.classList.remove('opacity-0');
+                }, 50);
+            }
+
+            // Update dots
+            const dots = document.querySelectorAll('.nav-dot');
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.add('bg-white', 'text-black');
+                    dot.classList.remove('text-gray-400');
+                } else {
+                    dot.classList.remove('bg-white', 'text-black');
+                    dot.classList.add('text-gray-400');
+                }
+            });
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSlideUI();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlideUI();
+            }
+        }
+
+        function goToSlide(index) {
+            if (index >= 0 && index < totalSlides) {
+                currentSlide = index;
+                updateSlideUI();
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'Space' || e.key === ' ') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+    </script>
+</body>
+</html>
